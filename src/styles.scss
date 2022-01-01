@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+
+$bgColor:#131722;
+$lightBgColor:#24baef;
+$bgTransparent:rgba(36,186,239,.6) ;
+$fontColor:#fff;
+$borderColor:#a8a8a83d;
+$borderHeight:1px;
+$secondFontColor:#949cb0;
+
+*
+{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+body
+{
+    background-color:$bgColor;
+    color: $fontColor;
+}
+
+.line
+{
+    background-color: $borderColor;
+    height: $borderHeight;
+}
+
+.font-2nd
+{
+    color:$secondFontColor;
+}
+
+.text-active
+{
+    color: $lightBgColor !important;
+}
+
+.btn-form
+{
+    background-color: $lightBgColor !important;
+    color: $fontColor !important;
+}
+
+
+.logout-hover:hover
+{
+    color: $lightBgColor !important;
+    font-weight: bold;
+    cursor:pointer;
+}

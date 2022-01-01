@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container-fluid px-1">
+    <a class="navbar-brand font-weight-bold">Project ANG</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="isLogin" routerLink="/home" routerLinkActive="text-active font-weight-bold">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="isLogin" routerLink="/movies" routerLinkActive="text-active font-weight-bold">Movies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="isLogin" routerLink="/tv-shows" routerLinkActive="text-active font-weight-bold">Tv Shows</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" *ngIf="isLogin" routerLink="/about" routerLinkActive="text-active font-weight-bold">About</a>
+        </li>
+        <var><li class="nav-item">
+          <a class="nav-link" *ngIf="isLogin" routerLink="/contact" routerLinkActive="text-active font-weight-bold">Contact me</a>
+      </li></var>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!isLogin" routerLink="/login" routerLinkActive="text-active font-weight-bold">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" *ngIf="!isLogin" routerLink="/register" routerLinkActive="text-active font-weight-bold">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link logout-hover" (click)="logOut()" *ngIf="isLogin" >Log Out</a>
+      </li>
+      </ul>
+    </div>
+  </div>    
+</nav>

@@ -1,0 +1,33 @@
+<div class="row">
+
+    <div class="col-lg-4 col-sm-12 d-flex flex-column my-3">
+        <div class="line w-50 mb-3"></div>
+        <h1>Trending <br> Movies <br> to Watch Now</h1>
+        <p class="font-2nd">Most Watched Movies By day</p>
+        <div class="line w-100 mt-3"></div>
+    </div>
+
+    <div *ngFor="let movie of moviesData" class="col-lg-2 col-md-6 col-sm-12">
+        <img [routerLink]="['/moviedetails' , movie.id]" [src]="imgBaseURL+movie.poster_path" class="img-fluid rounded-lg" alt="">
+        <h3 [routerLink]="['/moviedetails' , movie.id]" class="h6 text-center pt-2">{{movie.title}}{{movie.name}}</h3>
+    </div>
+    
+</div>
+
+
+
+<div class="row pt-5">
+
+    <div class="col-lg-4 col-sm-12 d-flex flex-column my-3">
+        <div class="line w-50 mb-3"></div>
+        <h2 class="h1">Trending <br> TV <br> to Watch Now</h2>
+        <p class="font-2nd">Most Watched Movies By day</p>
+        <div class="line w-100 mt-3"></div>
+    </div>
+
+    <div *ngFor="let serie of tvData" class="col-lg-2 col-md-6 col-sm-12">
+        <img [routerLink]="['/tvdetails' , serie.id]" [src]="imgBaseURL+serie.poster_path" class="img-fluid rounded-lg" alt="">
+        <h3 [routerLink]="['/tvdetails' , serie.id]" class="h6 text-center pt-2">{{serie.title}}{{serie.name}}</h3>
+    </div>
+    
+</div>
